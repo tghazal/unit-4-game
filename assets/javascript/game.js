@@ -1,17 +1,19 @@
 
 var wins = 0;
 var loses = 0;
-
+//declair crystal object
 var crystals = {
     randomNumber: 0,
     score: 0,
     imgsrc: ["assets/images/crystal.png", "assets/images/blue.png", "assets/images/green.png", "assets/images/purple.png"],
-
+ 
+    //fuction to return random number
     createRandomNumber: function () {
 
         this.randomNumber = Math.floor(Math.random() * 102) + 19;
     },
 
+    //fuction to create images and asign random value attributes  for each and then minupulating them to html
     createImagesWithRandomValues: function () {
         for (var i = 0; i < 4; i++) {
             
@@ -30,7 +32,8 @@ var crystals = {
 
 
     },
-
+    
+    //function to change the value attributes for images with random numbers
     changeRandomValue()
     {
         $( '.myCrysal' ).each( function ( index ) {
@@ -39,6 +42,8 @@ var crystals = {
         });
 
     },
+
+    
     addCrystalValueToScore: function (crystalValue) {
 
         this.score = this.score + crystalValue;
